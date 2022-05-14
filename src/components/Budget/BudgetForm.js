@@ -28,13 +28,14 @@ export const BudgetForm = ({
           value={sum}
           onChange={handleSum}
         />
-        <button 
+        
+      </div>
+      <button 
         type='submit' 
-        className='submit-btn'
+        className='submit-btn-bud'
         >
           {isEditing ? 'edit' : "submit"}
         </button>
-      </div>
     </form> 
   );
 };

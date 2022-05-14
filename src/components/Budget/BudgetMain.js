@@ -101,7 +101,7 @@ export const BudgetMain = () => {
         clearCosts={clearCosts}
       />
       <h3> 
-        total spending :  
+        total spending: {" "}  
         <span>
           $ 
           {costs.reduce((acc,curr) => {

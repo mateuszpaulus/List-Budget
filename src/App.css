@@ -124,7 +124,7 @@ p {
 }
 @media screen and (min-width: 992px) {
   .section {
-    width: 95vw;
+    width: 65vw;
   }
 }
 main {
@@ -253,8 +253,7 @@ Grocery List
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  
+  /* display: table-cell; */
 }
 .input {
   padding: 0.25rem;
@@ -291,11 +290,27 @@ Grocery List
   background: var(--clr-2);
   color: var(--clr-white);
 }
-
+.submit-btn-bud {
+  background: var(--clr-3);
+  border-color: transparent;
+  align-items: center;
+  padding: 0.25rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  content: var(--clr-2);
+  transition: var(--transition);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+.submit-btn:hover {
+  background: var(--clr-2);
+  color: var(--clr-white);
+}
 .list-container {
   margin-top: 2rem;
 }
-
 .item-list {
   display: flex;
   align-items: center;
