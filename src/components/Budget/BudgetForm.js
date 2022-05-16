@@ -19,6 +19,10 @@ export const BudgetForm = ({
           value={name}
           onChange={handleName}
         />
+        
+        
+      </div>
+      <div className='form-control'>
         <input 
           type='number' 
           className='input' 
@@ -28,7 +32,6 @@ export const BudgetForm = ({
           value={sum}
           onChange={handleSum}
         />
-        
       </div>
       <button 
         type='submit' 

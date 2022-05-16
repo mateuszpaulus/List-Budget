@@ -266,6 +266,7 @@ Grocery List
   flex: 1 0 auto;
   color: var(--clr-5);
   width: auto;
+  margin-bottom: 0.25rem;
 }
 .input::placeholder {
   font-family: var(--ff-secondary);
