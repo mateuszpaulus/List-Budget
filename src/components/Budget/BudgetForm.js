@@ -12,20 +12,18 @@ export const BudgetForm = ({
       <div className='form-control'>
         <input 
           type='text' 
-          className='input' 
+          className='input-bud' 
           id='name'
           name='name'
           placeholder='e.g. expenses'
           value={name}
           onChange={handleName}
         />
-        
-        
       </div>
       <div className='form-control'>
         <input 
           type='number' 
-          className='input' 
+          className='input-bud' 
           id='sum'
           name='sum'
           placeholder='e.g. 100'
@@ -37,7 +35,7 @@ export const BudgetForm = ({
         type='submit' 
         className='submit-btn-bud'
         >
-          {isEditing ? 'edit' : "submit"}
+          {isEditing ? 'edit' : 'submit'}
         </button>
     </form> 
   );

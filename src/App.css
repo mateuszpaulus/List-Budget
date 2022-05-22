@@ -122,7 +122,7 @@ p {
 .section-center:hover {
   box-shadow: var(--dark-shadow);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 800px) {
   .section {
     width: 65vw;
   }
@@ -255,7 +255,7 @@ Grocery List
   align-items: center;
   /* display: table-cell; */
 }
-.input {
+.input, .input-bud {
   padding: 0.25rem;
   padding-left: 1rem;
   background: var(--clr-6);
@@ -266,6 +266,8 @@ Grocery List
   flex: 1 0 auto;
   color: var(--clr-5);
   width: auto;
+}
+.input-bud {
   margin-bottom: 0.25rem;
 }
 .input::placeholder {
@@ -286,13 +288,13 @@ Grocery List
   cursor: pointer;
   content: var(--clr-2);
   transition: var(--transition);
-  font-size: 0.85rem;
+  font-size: 0.875rem;
 }
 .submit-btn:hover {
   background: var(--clr-2);
   color: var(--clr-white);
 }
-/* @media screen and (min-width: 992px) {
+/* @media screen and (min-width: 800px) {
   .input {
     width: 65vw;
   }
