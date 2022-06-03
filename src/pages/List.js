@@ -1,10 +1,10 @@
 
 import React from 'react'
-import { ListMain } from '../components/ShoppingList/ListMain'
+import { HomeListMain } from '../components/HomeList/HomeListMain'
 export const List = () => {
     return (
         <main>
-            <ListMain />
+            <HomeListMain />
         </main>
     )
 }

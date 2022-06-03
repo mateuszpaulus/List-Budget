@@ -2,14 +2,14 @@ import React from 'react';
 export const BudgetForm = ({
   name,
   sum,
-  handleName,
-  handleSum,
-  handleSubmit,
+  onChangeName,
+  onChangeSum,
+  onSubmit,
   isEditing
 }) => { 
   return (
-    <form onSubmit={handleSubmit} className='form'> 
-      <div className='form-control'>
+    <form onSubmit={onSubmit} className='form'> 
+      <div className='form-action'>
         <input 
           type='text' 
           className='input-bud' 
@@ -17,10 +17,10 @@ export const BudgetForm = ({
           name='name'
           placeholder='e.g. expenses'
           value={name}
-          onChange={handleName}
+          onChange={onChangeName}
         />
       </div>
-      <div className='form-control'>
+      <div className='form-action'>
         <input 
           type='number' 
           className='input-bud' 
@@ -28,7 +28,7 @@ export const BudgetForm = ({
           name='sum'
           placeholder='e.g. 100'
           value={sum}
-          onChange={handleSum}
+          onChange={onChangeSum}
         />
       </div>
       <button 

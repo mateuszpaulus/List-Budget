@@ -2,16 +2,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from './images/logo.png'
-import { FaListUl } from 'react-icons/fa';
-import { FaCalculator } from 'react-icons/fa';
-import { FaCalendarAlt } from 'react-icons/fa';
-import { FaBars } from 'react-icons/fa';
+import { FaListUl, FaCalculator, FaBars } from 'react-icons/fa';
 
 export const Navbar = () => {
     const [showLinks, setShowLinks] = useState(false);
     return (
         <nav>
-            <div className='nav-center'>
+            <div className='nav'>
                 <div className='nav-header'>
                     <Link to='/'>
                         <img 
@@ -30,8 +27,8 @@ export const Navbar = () => {
                 <div 
                     className={`${
                         showLinks 
-                        ? 'links-container show-container' 
-                        : 'links-container'
+                        ? 'links-nav show-links' 
+                        : 'links-nav'
                     }`}>
                         <ul className='links'>
                             <li>

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import uuid from 'react-uuid'
-import { ListItem } from './ListItem';
+import { HomeListItem } from './HomeListItem';
 import { Alert } from './Alert';
 
 const getLocalStorage = localStorage.getItem('list') 
 ? JSON.parse(localStorage.getItem('list')) 
 : [];
 
-export const ListMain = () => {
+export const HomeListMain = () => {
     const [task, setTask] = useState('');
     const [list, setList] = useState(getLocalStorage);
     const [isEditing, setIsEditing] = useState(false);
@@ -15,7 +15,7 @@ export const ListMain = () => {
     const [alert, setAlert] = useState({ show: false, message: '', type: '' });
 
     // functionality
-    const handleSubmit = (e) => {
+    const onSubmit = (e) => {
         e.preventDefault();
         if (!task) {
         showAlert(true, 'danger', 'please enter task');
@@ -60,11 +60,11 @@ export const ListMain = () => {
         localStorage.setItem('list', JSON.stringify(list));
     }, [list]);
     return (
-        <section className='section-center'>
-            <form className='form' onSubmit={handleSubmit}>
+        <section className='section'>
+            <form className='form' onSubmit={onSubmit}>
                 {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
-                <h3>home list</h3>
-                <div className='form-control'>
+                <h3>Home List</h3>
+                <div className='form-action'>
                     <input
                         type='text'
                         className='input'
@@ -78,10 +78,10 @@ export const ListMain = () => {
                 </div>
             </form>
             {list.length > 0 && (
-                <div className='list-container'>
-                    <ListItem items={list} removeTask={removeTask} editTask={editTask} />
+                <div className='list'>
+                    <HomeListItem items={list} removeTask={removeTask} editTask={editTask} />
                     <button className='clear-btn' onClick={clearList}>
-                        clear tasks
+                        Clear Tasks
                     </button>
                 </div>
             )}

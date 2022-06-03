@@ -18,10 +18,10 @@ export const BudgetMain = () => {
   const [editId, setEditId] = useState(null);
 
   // functionality
-  const handleName = (e) => {
+  const onChangeName = (e) => {
     setName(e.target.value);
   };
-  const handleSum = (e) => {
+  const onChangeSum = (e) => {
     let sum = e.target.value;
     if (sum === '') {
       setSum(sum);
@@ -29,7 +29,7 @@ export const BudgetMain = () => {
       setSum(parseInt(sum))
     }
   };
-  const handleSubmit = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     if(name !== "" && sum > 0) {
       if (isEditing) {
@@ -83,15 +83,15 @@ export const BudgetMain = () => {
   localStorage.setItem('costs', JSON.stringify(costs))
 },[costs])
   return (
-    <section className='section-center'>
+    <section className='section'>
       {alert.show && <Alert {...alert} removeAlert={showAlert} costs={costs} />}
       <h3>budget</h3>
       <BudgetForm 
         name={name} 
         sum={sum} 
-        handleSum={handleSum}
-        handleName={handleName}
-        handleSubmit={handleSubmit}
+        onChangeSum={onChangeSum}
+        onChangeName={onChangeName}
+        onSubmit={onSubmit}
         isEditing={isEditing}
       />
       <BudgetList 

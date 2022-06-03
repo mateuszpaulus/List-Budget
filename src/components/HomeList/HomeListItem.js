@@ -1,14 +1,14 @@
 import React from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa';
-export const ListItem = ({ items, removeTask, editTask }) => {
+export const HomeListItem = ({ items, removeTask, editTask }) => {
   return (
     <div>
       {items.map((item) => {
         const { id, title } = item;
         return (
           <article className='item-list' key={id}>
-            <p className='description'>{title}</p>
-            <div className='btn-container'>
+            <p className='title'>{title}</p>
+            <div>
               <button
                 type='button'
                 className='edit-btn'
